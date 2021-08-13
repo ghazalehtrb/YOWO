@@ -4,15 +4,6 @@ PyTorch implementation of the article "[You Only Watch Once: A Unified CNN Archi
 
 **Updated paper** can be accessed via [**YOWO_updated.pdf**](https://github.com/wei-tim/YOWO/blob/master/examples/YOWO_updated.pdf)
 
-AVA dataset visualizations!
-<br/>
-<br/>
-<div align="center" style="width:image width px;">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/ava3.gif" width=240 alt="ava_example_1">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/ava1.gif" width=240 alt="ava_example_2">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/ava4.gif" width=240 alt="ava_example_3">
-</div>
-<br/>
 <br/>
 
 UCF101-24 and J-HMDB-21 datasets visualizations!
