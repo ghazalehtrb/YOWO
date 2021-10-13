@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 
 from core.cfam import CFAMBlock
-from backbones_2d import darknet
+from backbones_2d import darknet, darknet_53
 from backbones_3d import mobilenet, shufflenet, mobilenetv2, shufflenetv2, resnext, resnet
 
 """
@@ -23,6 +23,9 @@ class YOWO(nn.Module):
         if cfg.MODEL.BACKBONE_2D == "darknet":
             self.backbone_2d = darknet.Darknet("cfg/yolo.cfg")
             num_ch_2d = 425 # Number of output channels for backbone_2d
+        elif cfg.MODEL.BACKBONE_2D == "darknet-53":
+            self.backbone_2d = darknet_53.Darknet("cfg/yolov3.cfg")
+            num_ch_2d = 255
         else:
             raise ValueError("Wrong backbone_2d model is requested. Please select\
                               it from [darknet]")
@@ -96,8 +99,12 @@ def get_fine_tuning_parameters(model, cfg):
     if not cfg.WEIGHTS.FREEZE_BACKBONE_2D:
         ft_module_names.append('backbone_2d') # Fine tune complete backbone_3d
     else:
-        ft_module_names.append('backbone_2d.models.29') # Fine tune only layer 29 and 30
-        ft_module_names.append('backbone_2d.models.30') # Fine tune only layer 29 and 30
+        if cfg.MODEL.BACKBONE_2D == "darknet":
+            ft_module_names.append('backbone_2d.models.29') # Fine tune only layer 29 and 30
+            ft_module_names.append('backbone_2d.models.30') # Fine tune only layer 29 and 30
+        elif cfg.MODEL.BACKBONE_2D == "darknet-53":
+            ft_module_names.append('backbone_2d.models.104') # Fine tune only layer 104 and 105
+            ft_module_names.append('backbone_2d.models.105') # Fine tune only layer 104 and 105
 
     if not cfg.WEIGHTS.FREEZE_BACKBONE_3D:
         ft_module_names.append('backbone_3d') # Fine tune complete backbone_3d

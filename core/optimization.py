@@ -197,7 +197,8 @@ def test_ucf24_jhmdb21(cfg, epoch, model, test_loader):
                             correct_classification += 1
 
                     if best_iou > iou_thresh and int(boxes[best_j][6]) == box_gt[6]:
-                        correct = correct+1
+                        if boxes[best_j][4] > 0.25:
+                            correct = correct+1
 
             precision = 1.0*correct/(proposals+eps)
             recall = 1.0*correct/(total+eps)

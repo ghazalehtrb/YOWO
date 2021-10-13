@@ -129,7 +129,8 @@ class ShuffleNetV2(nn.Module):
         # building first layer
         input_channel = self.stage_out_channels[1]
         self.conv1 = conv_bn(3, input_channel, stride=(1,2,2))
-        self.maxpool = nn.MaxPool3d(kernel_size=3, stride=2, padding=1)
+        self.maxpool = nn.MaxPool3d(kernel_size=3, stride=(2,1,1), padding=1) ## coment for darknet
+        # self.maxpool = nn.MaxPool3d(kernel_size=3, stride=2, padding=1) ## comment for darknet-53
         
         self.features = []
         # building inverted residual blocks
