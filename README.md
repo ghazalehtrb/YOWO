@@ -1,30 +1,18 @@
-# You Only Watch Once (YOWO)
+# You Only Watch Once 53 (YOWO53)
 
-PyTorch implementation of the article "[You Only Watch Once: A Unified CNN Architecture for Real-Time Spatiotemporal Action Localization](https://github.com/wei-tim/YOWO/blob/master/examples/YOWO_updated.pdf)". The repositry contains code for real-time spatiotemporal action localization with PyTorch on AVA, UCF101-24 and JHMDB datasets!
+PyTorch implementation of the YOWO53 network from "[Joint Detection And Activity Recognition Of Construction Workers Using Convolutional Neural Networks](https://ec-3.org/publications/conferences/2021/paper/?id=197)" paper. YOWO53 is a variation of the original "[You Only Watch Once: A Unified CNN Architecture for Real-Time Spatiotemporal Action Localization](https://github.com/wei-tim/YOWO/blob/master/examples/YOWO_updated.pdf)"  YOWO network with Darknet53 as the 2D backbone. YOWO53 showed better detection performanace for small objects in our studies compared to YOWO. Please refer to "[https://github.com/wei-tim/YOWO](https://github.com/wei-tim/YOWO)" for more details. 
 
-**Updated paper** can be accessed via [**YOWO_updated.pdf**](https://github.com/wei-tim/YOWO/blob/master/examples/YOWO_updated.pdf)
 
 <br/>
 
 UCF101-24 and J-HMDB-21 datasets visualizations!
 <br/>
 <div align="center" style="width:image width px;">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/biking.gif" width=240 alt="biking">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/fencing.gif" width=240 alt="fencing">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/golf_swing.gif" width=240 alt="golf-swing">
+  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/Media2.gif" width=240 alt="biking">
 </div>
 
-<div align="center" style="width:image width px;"> 
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/catch.gif" width=240 alt="catch">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/brush_hair.gif" width=240 alt="brush-hair">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/pull_up.gif" width=240 alt="pull-up">
-</div>
-<br/>
-<br/>
   
-In this work, we present ***YOWO*** (***Y**ou **O**nly **W**atch **O**nce*), a unified CNN architecture for real-time spatiotemporal action localization in video stream. *YOWO* is a single-stage framework, the input is a clip consisting of several successive frames in a video, while the output predicts bounding box positions as well as corresponding class labels in current frame. Afterwards, with specific strategy, these detections can be linked together to generate *Action Tubes* in the whole video.
 
-Since we do not separate human detection and action classification procedures, the whole network can be optimized by a joint loss in an end-to-end framework. We have carried out a series of comparative evaluations on two challenging representative datasets **UCF101-24** and **J-HMDB-21**. Our approach outperforms the other state-of-the-art results while retaining real-time capability, providing 34 frames-per-second on 16-frames input clips and 62 frames-per-second on 8-frames input clips.
 
 
 ## Installation
