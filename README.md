@@ -8,7 +8,7 @@ PyTorch implementation of the YOWO53 network from "[Joint Detection And Activity
 UCF101-24 and J-HMDB-21 datasets visualizations!
 <br/>
 <div align="center" style="width:image width px;">
-  <img  src="https://github.com/wei-tim/YOWO/blob/master/examples/Media2.gif" width=240 alt="biking">
+  <img  src="https://github.com/ghazalehtrb/YOWO/blob/master/examples/Media2.gif" width=240 alt="biking">
 </div>
 
   
