@@ -12,12 +12,11 @@ Activity recognition results on construction workers!
 </div>
 
 ## Installation, public datasets, and pretrained models   
-Please refer to "[https://github.com/wei-tim/YOWO](https://github.com/wei-tim/YOWO)" for details on installation, to download publicly available datasets and pretrained models for the 3D backbones. The 2D Darknet53 pretrained backbone is included in 
-
+Please refer to "[https://github.com/wei-tim/YOWO](https://github.com/wei-tim/YOWO)" for details on installation, to download publicly available datasets, and to pretrained models for the 3D backbones. The pretrained 2D backbones (yolov2 and yolov3) can be downloaded from Darknet "[website](https://pjreddie.com/darknet/yolo/)". You can also downlaod some of the weights from "[here](https://drive.google.com/drive/folders/1csOY46qSuPCPPP97q6nLZw20x0eGLFV9?usp=sharing)". The scripts are modified to read a costume dataset based on the format used by UCF24; some changes might be required to load other dataset. 
 
 ## Installation
 ```bash
-git clone https://github.com/wei-tim/YOWO.git
+git clone https://github.com/ghazalehtrb/YOWO.git
 cd YOWO
 ```
 
