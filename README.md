@@ -5,7 +5,7 @@ PyTorch implementation of the YOWO53 network from "[Joint Detection And Activity
 
 <br/>
 
-Activity recognition results on construction workers!
+Activity recognition results on construction workers
 <br/>
 <div align="center" style="width:image width px;">
   <img  src="https://github.com/ghazalehtrb/YOWO/blob/master/examples/Media2.gif" width=400 alt="activity recognition of construction workers">
